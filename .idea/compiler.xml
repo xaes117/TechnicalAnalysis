@@ -10,7 +10,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="mavenlib" target="1.5" />
       <module name="TechnicalAnalysis" target="1.5" />
     </bytecodeTargetLevel>
   </component>

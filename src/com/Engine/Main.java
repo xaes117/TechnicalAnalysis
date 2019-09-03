@@ -49,6 +49,8 @@ public class Main {
             }
         }
 
+        StringBuilder message = new StringBuilder();
+
         for (Trade trade : tradeList) {
 
             double positionSize = Double.parseDouble(new DecimalFormat("#.###").format(100 * trade.positionSize));
@@ -59,6 +61,21 @@ public class Main {
             double avgWeighted = Double.parseDouble(new DecimalFormat("#.###").format(100 * trade.getWeightedGain()));
             double bgu = Double.parseDouble(new DecimalFormat("#.###").format(100 * trade.getWeightedGainUpside()));
             double bgd = Double.parseDouble(new DecimalFormat("#.###").format(100 * trade.getWeightedGainDownside()));
+
+            message.append("<br>------------");
+            message.append("<br>Ticker: ").append(trade.getTicker());
+            message.append("<br>Period: ").append(trade.getPeriod());
+            message.append("<br>Entry: ").append(trade.entry);
+            message.append("<br>Stoploss: ").append(trade.stoploss);
+            message.append("<br>Position Size: ").append(positionSize).append("%");
+            message.append("<br>Take Profit: ").append(trade.takeProfit);
+            message.append("<br>Expected Profit: ").append(expProfit).append("%");
+            message.append("<br>Max Loss: ").append(maxLoss).append("%");
+            message.append("<br>P: ").append(probability).append("%");
+            message.append("<br>Average Weighted Gain: ").append(avgWeighted).append("%");
+            message.append("<br>Average Weighted Bullish Gain: ").append(bgu).append("%");
+            message.append("<br>Average Weighted Bearish Gain: ").append(bgd).append("%");
+            message.append("<br>------------");
 
             System.out.println("------------");
             System.out.println("Ticker: " + trade.getTicker());
@@ -76,6 +93,12 @@ public class Main {
             System.out.println("Average Weighted Bearish Gain: " + bgd + "%");
             System.out.println("------------");
         }
+
+        String m = message.toString();
+//        System.out.println(m);
+
+        Mailer.setMsg(m);
+        Mailer.SendMail();
 
         // 60	1m
         // 180	3m
