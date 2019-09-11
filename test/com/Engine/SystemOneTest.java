@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import static com.Engine.TradeManager.compareCandles;
-import static com.Engine.TradeManager.compareNCandles;
-import static com.Engine.TradeManager.percentageChange;
+import static com.Engine.SystemOne.compareCandles;
+import static com.Engine.SystemOne.compareNCandles;
+import static com.Engine.SystemOne.percentageChange;
 
-public class TradeManagerTest extends TestCase {
+public class SystemOneTest extends TestCase {
 
     private OHLC prev;
     private OHLC current;

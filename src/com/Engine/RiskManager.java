@@ -77,18 +77,17 @@ public class RiskManager {
         return weightedGain;
     }
 
-    /*
-    f = (p(b+1) - 1) / b
+    public static Trade getBullishTrade(List<OHLC> ohlcList, double P) throws Exception {
 
-    f * is the fraction of the current bankroll to wager, i.e. how much to bet;
-    b is the net odds received on the wager ("b to 1"); that is, you could win $b (on top of getting back your $1 wagered) for a $1 bet
-    p is the probability of winning;
+        OHLC currentCandle = ohlcList.get(ohlcList.size() - 1);
 
-     */
-    public static double CalculatePositionSize(double p, double b) {
-        return (p * (b + 1) - 1) / b;
+        double exp = (currentCandle.getClose() - getLow(ohlcList)) * 2.5;
+        double reward = exp/currentCandle.getClose();
+        return getBullishTrade(ohlcList, reward, P);
+
     }
 
+    // expected gain a percentage e.g. 0.1
     public static Trade getBullishTrade(List<OHLC> ohlcList, double expectedGain, double P) throws Exception {
 
         if (expectedGain < SafetyMargin) {
@@ -126,6 +125,16 @@ public class RiskManager {
         t.setProbability(P);
 
         return t;
+
+    }
+
+    public static Trade getBearishTrade(List<OHLC> ohlcList, double P) throws Exception {
+
+        OHLC currentCandle = ohlcList.get(ohlcList.size() - 1);
+
+        double exp = (getHigh(ohlcList) - currentCandle.getClose()) * -2.5;
+        double reward = exp/currentCandle.getClose();
+        return getBearishTrade(ohlcList, reward, P);
 
     }
 
@@ -169,7 +178,19 @@ public class RiskManager {
 
     }
 
-    public static double CalcMaxLoss(double entry, double stoploss, double positionSize) {
+    /*
+    f = (p(b+1) - 1) / b
+
+    f * is the fraction of the current bankroll to wager, i.e. how much to bet;
+    b is the net odds received on the wager ("b to 1"); that is, you could win $b (on top of getting back your $1 wagered) for a $1 bet
+    p is the probability of winning;
+
+     */
+    public static double CalculatePositionSize(double p, double b) {
+        return (p * (b + 1) - 1) / b;
+    }
+
+    static double CalcMaxLoss(double entry, double stoploss, double positionSize) {
         double change = Math.abs(entry - stoploss);
         double percentageChange = change / entry;
         return percentageChange * positionSize;

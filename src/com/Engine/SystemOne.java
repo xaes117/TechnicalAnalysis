@@ -6,13 +6,14 @@ import DataStructures.TickerData;
 import DataStructures.Tuple;
 import DataStructures.PTuple;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-public class TradeManager {
+public class SystemOne {
 
     private static int minSampleSize = 20;
 
@@ -21,6 +22,74 @@ public class TradeManager {
     private static final String closeChange = "closeChange";
     private static final String openChange = "openChange";
     private static final String volChange = "volChange";
+
+    public static void run() {
+        List<Trade> tradeList = new ArrayList<Trade>();
+
+        String[] tickers = {"btcusd", "ethusd", "xrpusd", "ltcusd", "xmrusd", "eosusd", "ethbtc"};
+        String[] periods = {"14400", "21600", "43200", "86400", "259200"};
+
+//        String[] tickers = {"ethusd"};
+//        String[] periods = {"43200"};
+
+        int k = 0;
+
+        for (int i = 3; i < 9; i++) {
+            for (String ticker : tickers) {
+                for (String period : periods) {
+                    try {
+                        tradeList.add(FindTrade(ticker, period, i));
+                        System.out.println(++k + ": Trade found");
+                    } catch (Exception e) {
+//                    e.printStackTrace();
+                    }
+                }
+            }
+        }
+
+        for (Trade trade : tradeList) {
+
+            double positionSize = Double.parseDouble(new DecimalFormat("#.###").format(100 * trade.positionSize));
+            double maxLoss = Double.parseDouble(new DecimalFormat("#.###").format(100 * trade.maxLoss));
+            double expProfit = Double.parseDouble(new DecimalFormat("#.###").format(100 * trade.expectedProfit));
+            double probability = Double.parseDouble(new DecimalFormat("#.###").format(100 * trade.getProbability()));
+
+            double avgWeighted = Double.parseDouble(new DecimalFormat("#.###").format(100 * trade.getWeightedGain()));
+            double bgu = Double.parseDouble(new DecimalFormat("#.###").format(100 * trade.getWeightedGainUpside()));
+            double bgd = Double.parseDouble(new DecimalFormat("#.###").format(100 * trade.getWeightedGainDownside()));
+
+            Main.message.append("<br>------------");
+            Main.message.append("<br>Ticker: ").append(trade.getTicker());
+            Main.message.append("<br>Period: ").append(trade.getPeriod());
+            Main.message.append("<br>Entry: ").append(trade.entry);
+            Main.message.append("<br>Stoploss: ").append(trade.stoploss);
+            Main.message.append("<br>Position Size: ").append(positionSize).append("%");
+            Main.message.append("<br>Take Profit: ").append(trade.takeProfit);
+            Main.message.append("<br>Expected Profit: ").append(expProfit).append("%");
+            Main.message.append("<br>Max Loss: ").append(maxLoss).append("%");
+            Main.message.append("<br>P: ").append(probability).append("%");
+            Main.message.append("<br>Average Weighted Gain: ").append(avgWeighted).append("%");
+            Main.message.append("<br>Average Weighted Bullish Gain: ").append(bgu).append("%");
+            Main.message.append("<br>Average Weighted Bearish Gain: ").append(bgd).append("%");
+            Main.message.append("<br>------------");
+
+            System.out.println("------------");
+            System.out.println("Ticker: " + trade.getTicker());
+            System.out.println("Period: " + trade.getPeriod());
+            System.out.println("Entry: " + trade.entry);
+            System.out.println("Stoploss: " + trade.stoploss);
+            System.out.println("Position Size: " + positionSize + "%");
+            System.out.println("Take Profit: " + trade.takeProfit);
+            System.out.println("Expected Profit: " + expProfit + "%");
+            System.out.println("Max Loss: " + maxLoss + "%");
+//            System.out.println("Match length: " + trade.getMatchedPairs());
+            System.out.println("P: " + probability + "%");
+            System.out.println("Average Weighted Gain: " + avgWeighted + "%");
+            System.out.println("Average Weighted Bullish Gain: " + bgu + "%");
+            System.out.println("Average Weighted Bearish Gain: " + bgd + "%");
+            System.out.println("------------");
+        }
+    }
 
     // calculate the percentage change between two candles
     public static HashMap<String, Double> percentageChange(OHLC current, OHLC prev) {

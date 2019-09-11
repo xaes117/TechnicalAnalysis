@@ -11,12 +11,17 @@ public class Trade {
     private double weightedGainUpside;
     private double weightedGainDownside;
 
-    public final double entry;
-    public final double stoploss;
-    public final double takeProfit;
-    public final double positionSize;
-    public final double maxLoss;
-    public final double expectedProfit;
+    public double entry;
+    public double stoploss;
+    public double takeProfit;
+    public double positionSize;
+    public double maxLoss;
+    public double expectedProfit;
+
+    public Trade(String ticker, String period) {
+        this.ticker = ticker;
+        this.period = period;
+    }
 
     public Trade(double entry, double positionSize, double stoploss, double takeProfit) {
         this.entry = entry;
