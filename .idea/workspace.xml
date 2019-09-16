@@ -7,45 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6cc57ed-f193-44fc-b09b-c90848bb3a89" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_util_6_1_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lib/ChaikinVolume.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lib/Indicators.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lib/TD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Engine/SystemTwo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechnicalAnalysis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TechnicalAnalysis.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lib/MovingAverages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/MovingAverages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DBConnection/DataReciever.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBConnection/DataReciever.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/Engine/Mailer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Engine/Mailer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/Engine/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Engine/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Engine/RiskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Engine/RiskManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Engine/SystemOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Engine/SystemOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Engine/SystemTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Engine/SystemTwo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/Engine/Trade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Engine/Trade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Engine/TradeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Engine/SystemOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DBConnection/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DBConnection/DBConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DBConnection/DataReciever.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DBConnection/DataReciever.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataStructures/OHLC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataStructures/OHLC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataStructures/PTuple.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataStructures/PTuple.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataStructures/TickerData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataStructures/TickerData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataStructures/Tuple.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataStructures/Tuple.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JfreeCharts/PlotChart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JfreeCharts/PlotChart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Lib/Exchanges.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lib/Exchanges.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Lib/MovingAverages$EMA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Lib/MovingAverages.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lib/MovingAverages.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Engine/Mailer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Engine/Mailer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Engine/Mailer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Engine/Mailer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Engine/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Engine/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Engine/RiskManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Engine/RiskManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Engine/Trade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Engine/Trade.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Engine/TradeManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/Engine/RiskManagerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/Engine/RiskManagerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/Engine/TradeManagerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/Engine/TradeManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/Engine/SystemOneTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/mavenlib/target/" />
@@ -145,13 +112,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="32" />
-          <entry key="java" value="6661" />
+          <entry key="java" value="7966" />
           <entry key="xml" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6661" />
+          <entry key="JAVA" value="7966" />
           <entry key="PLAIN_TEXT" value="32" />
           <entry key="XML" value="5" />
         </counts>
@@ -159,13 +126,13 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="44" />
+          <entry key="java" value="52" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="44" />
+          <entry key="JAVA" value="52" />
         </counts>
       </usages-collector>
     </session>
@@ -175,8 +142,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Engine/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+            <state relative-caret-position="315">
+              <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -185,15 +152,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/Engine/Trade.java">
+        <entry file="file://$PROJECT_DIR$/src/com/Engine/SystemOne.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-              <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+            <state relative-caret-position="395">
+              <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -201,8 +166,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Engine/SystemTwo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="102" selection-start-line="102" selection-end-line="102" />
+            <state relative-caret-position="340">
+              <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -210,10 +175,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lib/TD.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1410">
+            <state relative-caret-position="449">
               <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -225,13 +190,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/Engine/SystemOne.java">
+        <entry file="file://$PROJECT_DIR$/src/DataStructures/OHLC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1062">
-              <caret line="85" column="38" lean-forward="true" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="45">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/Engine/Trade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1470">
+              <caret line="124" column="5" lean-forward="true" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -272,6 +243,8 @@
       <find>bitfinexClient</find>
       <find>hex</find>
       <find>maxloss</find>
+      <find>.y.</find>
+      <find>addToMap</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -319,18 +292,18 @@
         <option value="$PROJECT_DIR$/src/Lib/OC.java" />
         <option value="$PROJECT_DIR$/src/Lib/CO.java" />
         <option value="$PROJECT_DIR$/src/Lib/MovingAverages.java" />
-        <option value="$PROJECT_DIR$/src/DBConnection/DataReciever.java" />
         <option value="$PROJECT_DIR$/src/Lib/TD.java" />
         <option value="$PROJECT_DIR$/src/Lib/Indicators.java" />
         <option value="$PROJECT_DIR$/src/Lib/Fibonacci.java" />
         <option value="$PROJECT_DIR$/src/Lib/ChaikinVolume.java" />
         <option value="$PROJECT_DIR$/src/com/Engine/TestClass.java" />
         <option value="$PROJECT_DIR$/src/com/Engine/RiskManager.java" />
-        <option value="$PROJECT_DIR$/src/com/Engine/SystemOne.java" />
-        <option value="$PROJECT_DIR$/src/com/Engine/Trade.java" />
         <option value="$PROJECT_DIR$/src/com/Engine/Mailer.java" />
         <option value="$PROJECT_DIR$/src/com/Engine/Main.java" />
+        <option value="$PROJECT_DIR$/src/DBConnection/DataReciever.java" />
         <option value="$PROJECT_DIR$/src/com/Engine/SystemTwo.java" />
+        <option value="$PROJECT_DIR$/src/com/Engine/SystemOne.java" />
+        <option value="$PROJECT_DIR$/src/com/Engine/Trade.java" />
       </list>
     </option>
   </component>
@@ -388,6 +361,12 @@
               <item name="TechnicalAnalysis" type="b2602c69:ProjectViewProjectNode" />
               <item name="TechnicalAnalysis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="DataStructures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TechnicalAnalysis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TechnicalAnalysis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="DBConnection" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -425,7 +404,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568211848268" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568666510854" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/com" />
@@ -469,7 +448,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="BFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Engine.BFX" />
       <module name="TechnicalAnalysis" />
@@ -483,12 +462,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BFXConnector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BFX.BFXConnector" />
+    <configuration name="DataReciever" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DBConnection.DataReciever" />
       <module name="TechnicalAnalysis" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="BFX.*" />
+          <option name="PATTERN" value="DBConnection.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -538,17 +517,17 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Mailer" />
-      <item itemvalue="Application.BFXConnector" />
       <item itemvalue="Application.BFX" />
       <item itemvalue="Application.SystemTwo" />
+      <item itemvalue="Application.DataReciever" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SystemTwo" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.BFX" />
-        <item itemvalue="Application.BFXConnector" />
+        <item itemvalue="Application.DataReciever" />
         <item itemvalue="Application.Mailer" />
+        <item itemvalue="Application.SystemTwo" />
+        <item itemvalue="Application.BFX" />
       </list>
     </recent_temporary>
   </component>
@@ -625,8 +604,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3554217" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39638555" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3554217" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39638555" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
@@ -654,18 +633,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/Engine/SystemTwo.java</url>
-          <line>102</line>
-          <properties />
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -794,37 +761,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBConnection/DataReciever.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="151" column="101" selection-start-line="151" selection-start-column="101" selection-end-line="151" selection-end-column="101" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Lib/Exchanges.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructures/OHLC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBConnection/DBConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -869,16 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructures/TickerData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#412#413#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Lib/ChaikinVolume.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
@@ -896,38 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Engine/Mailer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#765#1021#0" expanded="true" />
-            <element signature="e#1020#1021#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Engine/SystemOne.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1062">
-          <caret line="85" column="38" lean-forward="true" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Engine/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Engine/RiskManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2070">
@@ -938,37 +836,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Engine/Trade.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Engine/Mailer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Engine/SystemTwo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        <state relative-caret-position="273">
+          <caret line="36" column="117" selection-start-line="36" selection-start-column="117" selection-end-line="36" selection-end-column="117" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DBConnection/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/TickerData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#412#413#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/OHLC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Lib/TD.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
+        <state relative-caret-position="449">
           <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3337#3338#0" expanded="true" />
             <element signature="e#3387#3388#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DBConnection/DataReciever.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3399#3419#0" expanded="true" />
+            <element signature="e#3723#3724#0" expanded="true" />
+            <element signature="e#3756#3757#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Engine/SystemTwo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Engine/SystemOne.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Engine/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Engine/Trade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="124" column="5" lean-forward="true" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
         </state>
       </provider>
     </entry>

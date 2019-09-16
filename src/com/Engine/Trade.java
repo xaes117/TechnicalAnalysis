@@ -29,7 +29,7 @@ public class Trade {
         this.takeProfit = takeProfit;
         this.positionSize = positionSize;
         this.maxLoss = RiskManager.CalcMaxLoss(this.entry, this.stoploss, this.positionSize);
-        this.expectedProfit = Math.abs(positionSize * (takeProfit - entry)/entry);
+        this.expectedProfit = Math.abs(positionSize * (takeProfit - entry) / entry);
     }
 
     public double getProbability() {
@@ -86,6 +86,42 @@ public class Trade {
 
     public void setWeightedGainDownside(double weightedGainDownside) {
         this.weightedGainDownside = weightedGainDownside;
+    }
+
+    public void translate() {
+//        "CHRIS/CME_RP2", //EURGBP
+//                "CHRIS/ICE_SS1", //GBPCHF
+//                "CHRIS/ICE_SY1", //GBPJPY
+//                "CHRIS/ICE_MP2", //GBPUSD
+//                "CHRIS/CME_SP2", //SPY
+//                "CHRIS/CME_GC6", //GOLD
+//                "CHRIS/CME_SI3"  //SILVER
+
+        if (this.getTicker().equals("CHRIS/CME_RP2")) {
+            this.setTicker("EURGBP" + " (CME_RP2)");
+        }
+
+        if (this.getTicker().equals("CHRIS/ICE_SS1")) {
+            this.setTicker("GBPCHF" + " (ICE_SS1)");
+        }
+
+        if (this.getTicker().equals("CHRIS/ICE_SY1")) {
+            this.setTicker("GBPJPY" + " (ICE_SY1)");
+        }
+
+        if (this.getTicker().equals("CHRIS/ICE_MP2")) {
+            this.setTicker("GBPUSD" + " (ICE_MP2)");
+        }
+
+        if (this.getTicker().equals("CHRIS/CME_SP2")) {
+            this.setTicker("SPY" + " (CME_SP2)");
+        }
+        if (this.getTicker().equals("CHRIS/CME_GC6")) {
+            this.setTicker("GOLD" + " (CME_GC6)");
+        }
+        if (this.getTicker().equals("CHRIS/CME_SI3")) {
+            this.setTicker("SILVER" + " (CME_SI3)");
+        }
     }
 }
 

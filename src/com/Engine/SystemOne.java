@@ -26,7 +26,7 @@ public class SystemOne {
     public static void run() {
         List<Trade> tradeList = new ArrayList<Trade>();
 
-        String[] tickers = {"btcusd", "ethusd", "xrpusd", "ltcusd", "xmrusd", "eosusd", "ethbtc"};
+        String[] tickers = DataReciever.tickers;
         String[] periods = {"14400", "21600", "43200", "86400", "259200"};
 
 //        String[] tickers = {"ethusd"};
@@ -36,12 +36,21 @@ public class SystemOne {
 
         for (int i = 3; i < 9; i++) {
             for (String ticker : tickers) {
-                for (String period : periods) {
+                if (DataReciever.IsCrypto(ticker)) {
+                    for (String period : periods) {
+                        try {
+                            tradeList.add(FindTrade(ticker, period, i));
+                            System.out.println(++k + ": Trade found");
+                        } catch (Exception e) {
+//                    e.printStackTrace();
+                        }
+                    }
+                } else {
                     try {
-                        tradeList.add(FindTrade(ticker, period, i));
+                        tradeList.add(FindTrade(ticker, "86400", i));
                         System.out.println(++k + ": Trade found");
                     } catch (Exception e) {
-//                    e.printStackTrace();
+//                        e.printStackTrace();
                     }
                 }
             }
@@ -57,6 +66,8 @@ public class SystemOne {
             double avgWeighted = Double.parseDouble(new DecimalFormat("#.###").format(100 * trade.getWeightedGain()));
             double bgu = Double.parseDouble(new DecimalFormat("#.###").format(100 * trade.getWeightedGainUpside()));
             double bgd = Double.parseDouble(new DecimalFormat("#.###").format(100 * trade.getWeightedGainDownside()));
+
+            trade.translate();
 
             Main.message.append("<br>------------");
             Main.message.append("<br>Ticker: ").append(trade.getTicker());

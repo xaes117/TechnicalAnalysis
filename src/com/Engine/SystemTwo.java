@@ -15,7 +15,7 @@ import java.util.List;
 
 public class SystemTwo {
 
-    private static String[] tickers = {"btcusd", "ethusd", "xrpusd", "ltcusd", "xmrusd", "eosusd", "ethbtc"};
+    private static String[] tickers = DataReciever.tickers;
     private static String[] periods = {"14400", "21600", "43200", "86400", "259200"};
 
     public static void main(String[] args) {
@@ -38,6 +38,8 @@ public class SystemTwo {
                 double maxLoss = Double.parseDouble(new DecimalFormat("#.###").format(100 * trade.maxLoss));
                 double expProfit = Double.parseDouble(new DecimalFormat("#.###").format(100 * trade.expectedProfit));
                 double probability = Double.parseDouble(new DecimalFormat("#.###").format(100 * trade.getProbability()));
+
+                trade.translate();
 
                 Main.message.append("<br>------------");
                 Main.message.append("<br>Ticker: ").append(trade.getTicker());
@@ -80,19 +82,35 @@ public class SystemTwo {
 
             HashMap<String, TickerData> data = DataReciever.getDataByTickerSymbol(ticker);
 
-            for (String period : periods) {
+            if (DataReciever.IsCrypto(ticker)) {
+
+                for (String period : periods) {
+                    TickerData tickerData = data.get(period);
+
+                    List<Double> CO = ChaikinVolume.ChaikinOscillator(tickerData.getOhlcs());
+                    int td = TD.getTD(tickerData.getOhlcs());
+
+//                System.out.println("Period: " + period);
+//                System.out.println("TD: " + td);
+//                System.out.println("Crossover: " + Indicators.Crossover(CO));
+
+                    score += (td + Indicators.Crossover(CO)) * SystemTwo.GetWeightByTimePeriod(period);
+                    highest += (8 + 8) * SystemTwo.GetWeightByTimePeriod(period);
+
+                }
+            } else {
+                String period = "86400";
                 TickerData tickerData = data.get(period);
 
                 List<Double> CO = ChaikinVolume.ChaikinOscillator(tickerData.getOhlcs());
                 int td = TD.getTD(tickerData.getOhlcs());
 
-                System.out.println("Period: " + period);
-                System.out.println("TD: " + td);
-                System.out.println("Crossover: " + Indicators.Crossover(CO));
+//                System.out.println("Period: " + period);
+//                System.out.println("TD: " + td);
+//                System.out.println("Crossover: " + Indicators.Crossover(CO));
 
                 score += (td + Indicators.Crossover(CO)) * SystemTwo.GetWeightByTimePeriod(period);
                 highest += (8 + 8) * SystemTwo.GetWeightByTimePeriod(period);
-
             }
 
             int start = data.get("86400").getOhlcs().size() - 7;
@@ -102,7 +120,7 @@ public class SystemTwo {
 
                 Trade t = null;
 
-                if  (score > 0) {
+                if  (score >= 0) {
                     t = RiskManager.getBullishTrade(data.get("86400").getOhlcs().subList(start, end), score/(highest * 1.5));
 
                 }
