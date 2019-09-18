@@ -26,8 +26,8 @@ public class Main {
         String m = message.toString();
         System.out.println(m);
 
-//        Mailer.setMsg(m);
-//        Mailer.SendMail();
+        Mailer.setMsg(m);
+        Mailer.SendMail();
 
         // 60	1m
         // 180	3m

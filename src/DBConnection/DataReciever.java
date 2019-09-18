@@ -28,13 +28,21 @@ public class DataReciever {
             "etcusd",
             "ethbtc",
             "CHRIS/CME_RP2", //EURGBP
-            "CHRIS/ICE_SS1", //GBPCHF
+            "CHRIS/ICE_SS2", //GBPCHF
             "CHRIS/ICE_SY1", //GBPJPY
             "CHRIS/ICE_MP2", //GBPUSD
+            "CHRIS/CME_M6E2", //EURUSD
+            "CHRIS/CME_AD1", // AUDUSD
+            "CHRIS/CME_CD2", // CADUSD
             "CHRIS/CME_SP2", //SPY
-            "CHRIS/CME_GC6", //GOLD
-            "CHRIS/CME_SI3"  //SILVER
+            "CHRIS/CME_NQ1", // NASDAQ
+            "CHRIS/LIFFE_Z1", // FTSE100
+            "CHRIS/CME_GC2", //GOLD
+            "CHRIS/CME_SI2",  //SILVER
+            "CHRIS/CME_PL1" // PLATINUM
+
     };
+
     public static final String[] periods = {"900", "1800", "3600", "7200", "14400", "21600", "43200", "86400", "259200"};
 
     private static List<PTuple<String, String, HashMap<String, TickerData>>> StoredData;

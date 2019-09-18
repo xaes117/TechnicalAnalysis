@@ -102,15 +102,19 @@ public class SystemTwo {
                 String period = "86400";
                 TickerData tickerData = data.get(period);
 
-                List<Double> CO = ChaikinVolume.ChaikinOscillator(tickerData.getOhlcs());
-                int td = TD.getTD(tickerData.getOhlcs());
+                if (tickerData.getOhlcs().size() > 100) {
+                    List<Double> CO = ChaikinVolume.ChaikinOscillator(tickerData.getOhlcs(), 100);
+                    int td = TD.getTD(tickerData.getOhlcs());
 
 //                System.out.println("Period: " + period);
 //                System.out.println("TD: " + td);
 //                System.out.println("Crossover: " + Indicators.Crossover(CO));
 
-                score += (td + Indicators.Crossover(CO)) * SystemTwo.GetWeightByTimePeriod(period);
-                highest += (8 + 8) * SystemTwo.GetWeightByTimePeriod(period);
+                    score += (td + Indicators.Crossover(CO)) * SystemTwo.GetWeightByTimePeriod(period);
+                    highest += (8 + 5) * SystemTwo.GetWeightByTimePeriod(period);
+                }
+
+
             }
 
             int start = data.get("86400").getOhlcs().size() - 7;
@@ -120,13 +124,18 @@ public class SystemTwo {
 
                 Trade t = null;
 
-                if  (score >= 0) {
-                    t = RiskManager.getBullishTrade(data.get("86400").getOhlcs().subList(start, end), score/(highest * 1.5));
+                double p = score/(highest * 1.05);
 
+                if (p > 0.5) {
+                    p = 0.5;
+                }
+
+                if  (score >= 0) {
+                    t = RiskManager.getBullishTrade(data.get("86400").getOhlcs().subList(start, end), p);
                 }
 
                 if (score < -0) {
-                    t = RiskManager.getBearishTrade(data.get("86400").getOhlcs().subList(start, end), score/(highest * 1.5));
+                    t = RiskManager.getBearishTrade(data.get("86400").getOhlcs().subList(start, end), p);
                 }
 
                 t.setTicker(ticker);
@@ -137,8 +146,9 @@ public class SystemTwo {
                 e.printStackTrace();
             }
 
-
         }
+
+        System.out.println("Test");
 
         return tradeList;
     }

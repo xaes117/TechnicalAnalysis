@@ -130,6 +130,10 @@ public class RiskManager {
 
     public static Trade getBearishTrade(List<OHLC> ohlcList, double P) throws Exception {
 
+        if (P < 0) {
+            P = P * -1;
+        }
+
         OHLC currentCandle = ohlcList.get(ohlcList.size() - 1);
 
         double exp = (getHigh(ohlcList) - currentCandle.getClose()) * -2.5;
@@ -139,6 +143,11 @@ public class RiskManager {
     }
 
     public static Trade getBearishTrade(List<OHLC> ohlcList, double expectedGain, double P) throws Exception {
+
+        // if
+        if (P < 0) {
+            P = P * -1;
+        }
 
         // expectedGain is negative for bearish trades
         if (expectedGain * -1 < SafetyMargin) {

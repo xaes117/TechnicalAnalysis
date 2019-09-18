@@ -34,7 +34,11 @@ public class Mailer {
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress("tradereports118@gmail.com"));
             message.setRecipients(
-                    Message.RecipientType.TO, InternetAddress.parse("xaes@protonmail.com,quantumbiology@hotmail.co.uk"));
+                    Message.RecipientType.TO, InternetAddress.parse(""
+                            + "xaes@protonmail.com"
+                            + ",quantumbiology@hotmail.co.uk"
+                    //        + ",bugfind@xs4all.nl"
+                    ));
             message.setSubject("Trade Report");
 
             String msg = Mailer.msg;

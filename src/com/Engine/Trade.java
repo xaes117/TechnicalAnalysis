@@ -96,31 +96,54 @@ public class Trade {
 //                "CHRIS/CME_SP2", //SPY
 //                "CHRIS/CME_GC6", //GOLD
 //                "CHRIS/CME_SI3"  //SILVER
+//                "CHRIS/CME_PL1" // PLATINUM
+
+        // "CHRIS/CME_M6E2" // EURUSD
+        // "CHRIS/CME_AD1" // AUDUSD
+        // "CHRIS/CME_CD2" // CADUSD
+        // "CHRIS/LIFFE_Z1" // FTSE100
+        // "CHRIS/CME_NQ1" // NASDAQ
 
         if (this.getTicker().equals("CHRIS/CME_RP2")) {
             this.setTicker("EURGBP" + " (CME_RP2)");
         }
-
-        if (this.getTicker().equals("CHRIS/ICE_SS1")) {
-            this.setTicker("GBPCHF" + " (ICE_SS1)");
+        if (this.getTicker().equals("CHRIS/ICE_SS2")) {
+            this.setTicker("GBPCHF" + " (ICE_SS2)");
         }
-
         if (this.getTicker().equals("CHRIS/ICE_SY1")) {
             this.setTicker("GBPJPY" + " (ICE_SY1)");
         }
-
         if (this.getTicker().equals("CHRIS/ICE_MP2")) {
             this.setTicker("GBPUSD" + " (ICE_MP2)");
         }
-
         if (this.getTicker().equals("CHRIS/CME_SP2")) {
             this.setTicker("SPY" + " (CME_SP2)");
         }
-        if (this.getTicker().equals("CHRIS/CME_GC6")) {
-            this.setTicker("GOLD" + " (CME_GC6)");
+        if (this.getTicker().equals("CHRIS/CME_GC2")) {
+            this.setTicker("GOLD" + " (CME_GC2)");
         }
-        if (this.getTicker().equals("CHRIS/CME_SI3")) {
-            this.setTicker("SILVER" + " (CME_SI3)");
+        if (this.getTicker().equals("CHRIS/CME_SI2")) {
+            this.setTicker("SILVER" + " (CME_SI2)");
+        }
+        if (this.getTicker().equals("CHRIS/CME_M6E2")) {
+            this.setTicker("EURUSD (CME_M6E2)");
+        }
+        if (this.getTicker().equals("CHRIS/CME_AD1")) {
+            this.setTicker("AUDUSD (CME_AD1)");
+        }
+        if (this.getTicker().equals("CHRIS/CME_CD2")) {
+            this.setTicker("CADUSD (CME_CD2)");
+        }
+        if (this.getTicker().equals("CHRIS/CME_PL1")) {
+            this.setTicker("PLATINUM (CME_PL1)");
+        }
+
+        if (this.getTicker().equals("CHRIS/LIFFE_Z1")) {
+            this.setTicker("FTSE100 (LIFFE_Z1)");
+        }
+
+        if (this.getTicker().equals("CHRIS/CME_NQ1")) {
+            this.setTicker("NASDAQ (CME_NQ1");
         }
     }
 }

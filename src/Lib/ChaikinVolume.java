@@ -53,6 +53,10 @@ public class ChaikinVolume {
         return retList;
     }
 
+    public static List<Double> ChaikinOscillator(List<OHLC> ohlcList, int lookback) throws Exception {
+        return ChaikinOscillator(ohlcList.subList(ohlcList.size() - lookback, ohlcList.size() - 1));
+    }
+
     public static List<Double> ChaikinOscillator(List<OHLC> ohlcList) throws Exception {
         List<Double> results = new LinkedList<>();
 
