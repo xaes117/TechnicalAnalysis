@@ -39,6 +39,11 @@ public class ChaikinVolume {
         double low = ohlc.getLow();
         double high = ohlc.getHigh();
         double volume = ohlc.getVolume();
+
+        if (high - low == 0) {
+            return 0;
+        }
+
         double moneyFlowMultiplier = ((close - low) - (high - close)) / (high - low);
         return moneyFlowMultiplier * volume;
     }

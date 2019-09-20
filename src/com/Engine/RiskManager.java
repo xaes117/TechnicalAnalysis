@@ -10,6 +10,7 @@ public class RiskManager {
     public static final double SafetyMargin = 0.025;
     public static final double DefaultProbability = 0.3;
     public static final double LowerProbability = 0.1;
+    public static final double DefaultFibTarget = 2.618;
 
     public static boolean IsBullish(List<OHLC> matchingPattern) {
         return (1 + SafetyMargin) * matchingPattern.get(matchingPattern.size() / 2 - 1).getClose() < matchingPattern.get(matchingPattern.size() - 1).getClose();
@@ -81,7 +82,7 @@ public class RiskManager {
 
         OHLC currentCandle = ohlcList.get(ohlcList.size() - 1);
 
-        double exp = (currentCandle.getClose() - getLow(ohlcList)) * 2.5;
+        double exp = (currentCandle.getClose() - getLow(ohlcList)) * RiskManager.DefaultFibTarget;
         double reward = exp/currentCandle.getClose();
         return getBullishTrade(ohlcList, reward, P);
 
@@ -136,7 +137,7 @@ public class RiskManager {
 
         OHLC currentCandle = ohlcList.get(ohlcList.size() - 1);
 
-        double exp = (getHigh(ohlcList) - currentCandle.getClose()) * -2.5;
+        double exp = (getHigh(ohlcList) - currentCandle.getClose()) * -1 * RiskManager.DefaultFibTarget;
         double reward = exp/currentCandle.getClose();
         return getBearishTrade(ohlcList, reward, P);
 

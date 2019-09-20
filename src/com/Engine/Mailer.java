@@ -37,7 +37,8 @@ public class Mailer {
                     Message.RecipientType.TO, InternetAddress.parse(""
                             + "xaes@protonmail.com"
                             + ",quantumbiology@hotmail.co.uk"
-                    //        + ",bugfind@xs4all.nl"
+                            + ",bugfind@xs4all.nl"
+                            + ",yarcisan@gmail.com"
                     ));
             message.setSubject("Trade Report");
 

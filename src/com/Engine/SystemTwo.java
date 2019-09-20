@@ -16,11 +16,12 @@ import java.util.List;
 public class SystemTwo {
 
     private static String[] tickers = DataReciever.tickers;
+    private static String testString = "CHRIS/CME_GC1";
+//    private static String[] tickers = {testString};
     private static String[] periods = {"14400", "21600", "43200", "86400", "259200"};
 
     public static void main(String[] args) {
-        DataReciever.LoadData();
-        DataReciever.setupAllData();
+        DataReciever.setupTest(testString);
         SystemTwo.run();
     }
 
@@ -102,16 +103,19 @@ public class SystemTwo {
                 String period = "86400";
                 TickerData tickerData = data.get(period);
 
-                if (tickerData.getOhlcs().size() > 100) {
-                    List<Double> CO = ChaikinVolume.ChaikinOscillator(tickerData.getOhlcs(), 100);
-                    int td = TD.getTD(tickerData.getOhlcs());
+                if (tickerData.getOhlcs().size() > 120) {
 
+//                    List<OHLC> ohlcs = tickerData.getOhlcs().subList(tickerData.getOhlcs().size()-200, tickerData.getOhlcs().size());
+
+                    List<Double> CO = ChaikinVolume.ChaikinOscillator(tickerData.getOhlcs(), 120);
+                    int td = TD.getTD(tickerData.getOhlcs());
+//                    System.out.println(ohlcs.size());
 //                System.out.println("Period: " + period);
 //                System.out.println("TD: " + td);
 //                System.out.println("Crossover: " + Indicators.Crossover(CO));
 
                     score += (td + Indicators.Crossover(CO)) * SystemTwo.GetWeightByTimePeriod(period);
-                    highest += (8 + 5) * SystemTwo.GetWeightByTimePeriod(period);
+                    highest += (8 + 8) * SystemTwo.GetWeightByTimePeriod(period);
                 }
 
 
@@ -126,8 +130,8 @@ public class SystemTwo {
 
                 double p = score/(highest * 1.05);
 
-                if (p > 0.5) {
-                    p = 0.5;
+                if (p > 0.45 || p < -0.45) {
+                    p = 0.45;
                 }
 
                 if  (score >= 0) {

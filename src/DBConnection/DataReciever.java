@@ -27,18 +27,18 @@ public class DataReciever {
             "eosusd",
             "etcusd",
             "ethbtc",
-            "CHRIS/CME_RP2", //EURGBP
-            "CHRIS/ICE_SS2", //GBPCHF
+            "CHRIS/CME_RP1", //EURGBP
+            "CHRIS/ICE_SS1", //GBPCHF
             "CHRIS/ICE_SY1", //GBPJPY
-            "CHRIS/ICE_MP2", //GBPUSD
-            "CHRIS/CME_M6E2", //EURUSD
+            "CHRIS/ICE_MP1", //GBPUSD
+            "CHRIS/CME_EC1", //EURUSD
             "CHRIS/CME_AD1", // AUDUSD
-            "CHRIS/CME_CD2", // CADUSD
-            "CHRIS/CME_SP2", //SPY
+            "CHRIS/CME_CD1", // CADUSD
+            "CHRIS/CME_SP1", //SPY
             "CHRIS/CME_NQ1", // NASDAQ
             "CHRIS/LIFFE_Z1", // FTSE100
-            "CHRIS/CME_GC2", //GOLD
-            "CHRIS/CME_SI2",  //SILVER
+            "CHRIS/CME_GC1", //GOLD
+            "CHRIS/CME_SI1",  //SILVER
             "CHRIS/CME_PL1" // PLATINUM
 
     };
@@ -251,6 +251,18 @@ public class DataReciever {
         }
 
         return false;
+    }
+
+    public static void setupTest(String ticker) {
+        StoredData = new ArrayList<PTuple<String, String, HashMap<String, TickerData>>>();
+        String s = retrieveData(Exchanges.Bitfinex, ticker);
+        StoredData.add(new PTuple<String, String, HashMap<String, TickerData>>(ticker, s, new HashMap<>()));
+
+        try {
+            setup(ticker);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {
