@@ -7,13 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6cc57ed-f193-44fc-b09b-c90848bb3a89" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/DBConnection/DataReciever.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBConnection/DataReciever.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lib/ChaikinVolume.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/ChaikinVolume.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lib/TD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/TD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Engine/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Engine/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Engine/RiskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Engine/RiskManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Engine/SystemTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Engine/SystemTwo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Engine/Trade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Engine/Trade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Engine/SystemOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Engine/SystemOne.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/mavenlib/target/" />
@@ -113,13 +107,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="32" />
-          <entry key="java" value="9241" />
+          <entry key="java" value="9264" />
           <entry key="xml" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9241" />
+          <entry key="JAVA" value="9264" />
           <entry key="PLAIN_TEXT" value="32" />
           <entry key="XML" value="5" />
         </counts>
@@ -127,13 +121,13 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="3" />
-          <entry key="java" value="101" />
+          <entry key="java" value="103" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="3" />
-          <entry key="JAVA" value="101" />
+          <entry key="JAVA" value="103" />
         </counts>
       </usages-collector>
     </session>
@@ -143,8 +137,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Engine/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="192">
+              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/Engine/SystemOne.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -173,10 +179,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Engine/SystemTwo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="601">
+            <state relative-caret-position="678">
               <caret line="137" selection-start-line="137" selection-end-line="137" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -194,18 +200,6 @@
                 <element signature="imports" expanded="true" />
                 <element signature="e#3337#3338#0" expanded="true" />
                 <element signature="e#3387#3388#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Lib/MovingAverages.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="44" column="34" lean-forward="true" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -236,10 +230,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Lib/ChaikinVolume.java">
+        <entry file="file://$PROJECT_DIR$/src/com/Engine/Mailer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="310">
+              <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -248,10 +242,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Lib/Indicators.java">
+        <entry file="file://$PROJECT_DIR$/src/Lib/ChaikinVolume.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+            <state relative-caret-position="151">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -347,15 +341,15 @@
         <option value="$PROJECT_DIR$/src/Lib/Indicators.java" />
         <option value="$PROJECT_DIR$/src/Lib/Fibonacci.java" />
         <option value="$PROJECT_DIR$/src/com/Engine/TestClass.java" />
-        <option value="$PROJECT_DIR$/src/com/Engine/SystemOne.java" />
-        <option value="$PROJECT_DIR$/src/com/Engine/Mailer.java" />
         <option value="$PROJECT_DIR$/src/Lib/TD.java" />
         <option value="$PROJECT_DIR$/src/DBConnection/DataReciever.java" />
         <option value="$PROJECT_DIR$/src/Lib/ChaikinVolume.java" />
-        <option value="$PROJECT_DIR$/src/com/Engine/Main.java" />
         <option value="$PROJECT_DIR$/src/com/Engine/Trade.java" />
         <option value="$PROJECT_DIR$/src/com/Engine/SystemTwo.java" />
         <option value="$PROJECT_DIR$/src/com/Engine/RiskManager.java" />
+        <option value="$PROJECT_DIR$/src/com/Engine/Mailer.java" />
+        <option value="$PROJECT_DIR$/src/com/Engine/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/Engine/SystemOne.java" />
       </list>
     </option>
   </component>
@@ -456,7 +450,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568940746318" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568941041647" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/com" />
@@ -655,8 +649,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3554217" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39638555" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3554217" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39638555" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
@@ -866,16 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Engine/Mailer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="38" column="61" lean-forward="true" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Double.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -884,16 +868,6 @@
             <element signature="e#21227#21228#0" expanded="true" />
             <element signature="e#21263#21264#0" expanded="true" />
             <element signature="e#22348#22349#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Engine/SystemOne.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1475">
-          <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1026,16 +1000,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Engine/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Engine/Trade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
@@ -1065,8 +1029,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Engine/SystemTwo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
+        <state relative-caret-position="678">
           <caret line="137" selection-start-line="137" selection-end-line="137" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Engine/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Engine/Mailer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Engine/SystemOne.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

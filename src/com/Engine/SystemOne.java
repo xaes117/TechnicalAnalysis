@@ -56,6 +56,10 @@ public class SystemOne {
             }
         }
 
+        System.out.println("<br>******************System One Results***********************<br>");
+
+        Main.message.append("<br>******************System One Results***********************<br>");
+
         for (Trade trade : tradeList) {
 
             double positionSize = Double.parseDouble(new DecimalFormat("#.###").format(100 * trade.positionSize));
