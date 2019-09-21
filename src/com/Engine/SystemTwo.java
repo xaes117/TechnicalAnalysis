@@ -15,13 +15,18 @@ import java.util.List;
 
 public class SystemTwo {
 
-    private static String[] tickers = DataReciever.tickers;
-    private static String testString = "CHRIS/CME_GC1";
+        private static String testString = "btcusd";
 //    private static String[] tickers = {testString};
+
+    private static String[] tickers = DataReciever.tickers;
     private static String[] periods = {"14400", "21600", "43200", "86400", "259200"};
 
     public static void main(String[] args) {
-        DataReciever.setupTest(testString);
+//        DataReciever.setupTest(testString);
+
+        DataReciever.LoadData();
+        DataReciever.setupAllData();
+
         SystemTwo.run();
     }
 
@@ -122,7 +127,7 @@ public class SystemTwo {
             }
 
             int start = data.get("86400").getOhlcs().size() - 7;
-            int end = data.get("86400").getOhlcs().size() - 1;
+            int end = data.get("86400").getOhlcs().size();
 
             try {
 
