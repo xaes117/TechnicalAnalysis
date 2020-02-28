@@ -1,40 +1,78 @@
 package com.Engine;
 
 import DBConnection.DataReciever;
-import DataStructures.OHLC;
 import DataStructures.TickerData;
-import Lib.ChaikinVolume;
-import Lib.Indicators;
-import Lib.TD;
+import Lib.MovingAverages;
 
 import java.sql.Timestamp;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class SystemTwo {
+public class SystemThree {
 
     private static String testString = "CHRIS/ICE_SY1";
     private static String[] tickers = {testString};
 
-//    private static String[] tickers = DataReciever.tickers;
+    //    private static String[] tickers = DataReciever.tickers;
     private static String[] periods = {"14400", "21600", "43200", "86400", "259200"};
 
     public static void main(String[] args) {
         DataReciever.setupTest(testString);
         DataReciever.LoadData();
         DataReciever.setupAllData();
-        SystemTwo.run();
+        SystemThree.run();
+    }
+
+    private static List<Trade> GetTrades() {
+
+        List<Trade> tradeList = new ArrayList<>();
+
+        for (String ticker : tickers) {
+
+            // Get 20 SMA
+            try {
+                HashMap<String, TickerData> data = DataReciever.getDataByTickerSymbol(ticker);
+
+                double score = 0;
+                double highest = 0;
+
+                for (Map.Entry<String, TickerData> pair : data.entrySet()) {
+
+                    String period = pair.getKey();
+                    List ohlcs = pair.getValue().getOhlcs();
+
+                    double[] sma = MovingAverages.SMA(ohlcs, 20, 100);
+                    System.out.println(sma);
+
+                    double weight = SystemTwo.GetWeightByTimePeriod(period);
+
+                    score = weight;
+
+
+                }
+
+                System.out.println(data);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        return tradeList;
+
     }
 
     public static void run() {
 
-        SystemTwo.PrintSettings();
+        SystemThree.PrintSettings();
 
         try {
 
-            List<Trade> tradeList = SystemTwo.GetTrades();
+            List<Trade> tradeList = SystemThree.GetTrades();
 
             for (Trade trade : tradeList) {
 
@@ -73,108 +111,6 @@ public class SystemTwo {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    private static List<Trade> GetTrades() throws Exception {
-
-        List<Trade> tradeList = new ArrayList<>();
-
-        for (String ticker : tickers) {
-
-            double score = 0;
-            double highest = 0;
-
-            HashMap<String, TickerData> data = DataReciever.getDataByTickerSymbol(ticker);
-
-            if (DataReciever.IsCrypto(ticker)) {
-
-                for (String period : periods) {
-                    TickerData tickerData = data.get(period);
-
-                    List<Double> CO = ChaikinVolume.ChaikinOscillator(tickerData.getOhlcs());
-                    int td = TD.getTD(tickerData.getOhlcs());
-
-//                System.out.println("Period: " + period);
-//                System.out.println("TD: " + td);
-//                System.out.println("Crossover: " + Indicators.Crossover(CO));
-
-                    score += (td + Indicators.Crossover(CO)) * SystemTwo.GetWeightByTimePeriod(period);
-                    highest += (8 + 8) * SystemTwo.GetWeightByTimePeriod(period);
-
-                }
-            } else {
-                String period = "86400";
-                TickerData tickerData = data.get(period);
-
-                if (tickerData.getOhlcs().size() > 120) {
-
-//                    List<OHLC> ohlcs = tickerData.getOhlcs().subList(tickerData.getOhlcs().size()-200, tickerData.getOhlcs().size());
-
-                    List<Double> CO = ChaikinVolume.ChaikinOscillator(tickerData.getOhlcs(), 120);
-                    int td = TD.getTD(tickerData.getOhlcs());
-//                    System.out.println(ohlcs.size());
-//                System.out.println("Period: " + period);
-//                System.out.println("TD: " + td);
-//                System.out.println("Crossover: " + Indicators.Crossover(CO));
-
-                    score += (td + Indicators.Crossover(CO)) * SystemTwo.GetWeightByTimePeriod(period);
-                    highest += (8 + 8) * SystemTwo.GetWeightByTimePeriod(period);
-                }
-
-
-            }
-
-            int start = data.get("86400").getOhlcs().size() - 7;
-            int end = data.get("86400").getOhlcs().size();
-
-            try {
-
-                Trade t = null;
-
-                double p = score/(highest * 1.05);
-
-                if (p > 0.45 || p < -0.45) {
-                    p = 0.45;
-                }
-
-                if  (score >= 0) {
-                    t = RiskManager.getBullishTrade(data.get("86400").getOhlcs().subList(start, end), p);
-                }
-
-                if (score < -0) {
-                    t = RiskManager.getBearishTrade(data.get("86400").getOhlcs().subList(start, end), p);
-                }
-
-                t.setTicker(ticker);
-                t.setPeriod("86400");
-                tradeList.add(t);
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-        }
-
-        System.out.println("Test");
-
-        return tradeList;
-    }
-
-    public static double GetWeightByTimePeriod(String period) {
-        // "3600", 7200", "14400", "21600", "43200", "86400", "172800", "259200"
-
-        if (period.equals("259200")) {
-            return 8;
-        } else if (period.equals("86400")) {
-            return 5;
-        } else if (period.equals("43200")) {
-            return 3;
-        } else if (period.equals("21600")) {
-            return 2;
-        } else if (period.equals("14400")) {
-            return 1;
-        }
-        return 0;
     }
 
     private static void PrintSettings() {

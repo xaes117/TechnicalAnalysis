@@ -6,7 +6,9 @@ import java.util.List;
 
 public class TD {
 
-    public static int getTD(List<OHLC> ohlcList) {
+    public static int getTD(List<OHLC> list) {
+
+        List<OHLC> ohlcList = list.subList(list.size() - 250, list.size());
 
         int green = 0;
         int red = 0;

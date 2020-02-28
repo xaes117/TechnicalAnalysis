@@ -27,7 +27,7 @@ public class Mailer {
             Session session = Session.getInstance(prop, new Authenticator() {
                 @Override
                 protected PasswordAuthentication getPasswordAuthentication() {
-                    return new PasswordAuthentication("tradereports188@gmail.com", "Hotdog123@");
+                    return new PasswordAuthentication("tradereports188@gmail.com", "");
                 }
             });
 

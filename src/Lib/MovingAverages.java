@@ -1,7 +1,10 @@
 package Lib;
 
+import DataStructures.OHLC;
+
 import javax.swing.text.NumberFormatter;
 import java.util.Arrays;
+import java.util.List;
 
 public class MovingAverages {
 
@@ -38,6 +41,20 @@ public class MovingAverages {
         }
 
         return periodEma;
+    }
+
+    // To save time
+    public static double[] SMA(List<OHLC> list, int period, int maxLookBack) throws Exception {
+
+        List<OHLC> ohlcList = list.subList(list.size() - maxLookBack, list.size());
+
+        double[] a = new double[ohlcList.size()];
+
+        for (int i = 0; i < ohlcList.size(); i++) {
+            a[i] = ohlcList.get(i).getClose();
+        }
+
+        return SMA(a, period);
     }
 
     public static double[] SMA(double[] price, int period) throws Exception {

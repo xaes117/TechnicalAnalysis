@@ -1,5 +1,6 @@
 package DataStructures;
 
+// OPEN HIGH LOW CLOSE
 public class OHLC {
 
     private double open;
