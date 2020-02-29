@@ -16,11 +16,18 @@ public class TD {
         int a = 0;
         int b = 0;
 
-//        a = nz(sellsetup[1]) + 1
-//        sellsetup = close > close[4] ? (a > 9 ? 1 : a) : 0
+// ------------------------------
+// PineScript code for reference
+// ------------------------------
 //
-//        b = nz(buysetup[1]) + 1
-//        buysetup = close < close[4] ? (b > 9 ? 1 : b) : 0
+// a = nz(sellsetup[1]) + 1
+// sellsetup = close > close[4] ? (a > 9 ? 1 : a) : 0
+//
+// b = nz(buysetup[1]) + 1
+// buysetup = close < close[4] ? (b > 9 ? 1 : b) : 0
+//
+// ------------------------------
+// ------------------------------
 
         for (int i = 4; i < ohlcList.size(); i++) {
             a = green + 1;
