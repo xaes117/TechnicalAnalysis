@@ -3,8 +3,7 @@ package DBConnection;
 import DataStructures.OHLC;
 import DataStructures.PTuple;
 import DataStructures.TickerData;
-import Lib.Exchanges;
-import com.Engine.SystemTwo;
+import TaLib.Exchanges;
 import org.json.JSONArray;
 import org.json.JSONObject;
 

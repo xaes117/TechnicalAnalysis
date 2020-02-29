@@ -1,8 +1,7 @@
-package Lib;
+package TaLib;
 
 import DataStructures.OHLC;
 
-import javax.swing.text.NumberFormatter;
 import java.util.Arrays;
 import java.util.List;
 

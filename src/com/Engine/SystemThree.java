@@ -2,7 +2,7 @@ package com.Engine;
 
 import DBConnection.DataReciever;
 import DataStructures.TickerData;
-import Lib.MovingAverages;
+import TaLib.MovingAverages;
 
 import java.sql.Timestamp;
 import java.text.DecimalFormat;

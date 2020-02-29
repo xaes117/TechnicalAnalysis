@@ -1,4 +1,4 @@
-package Lib;
+package TaLib;
 
 public class Exchanges {
 

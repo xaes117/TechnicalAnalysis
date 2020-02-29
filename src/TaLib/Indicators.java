@@ -1,6 +1,4 @@
-package Lib;
-
-import DataStructures.OHLC;
+package TaLib;
 
 import java.util.List;
 

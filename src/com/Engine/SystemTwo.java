@@ -1,11 +1,10 @@
 package com.Engine;
 
 import DBConnection.DataReciever;
-import DataStructures.OHLC;
 import DataStructures.TickerData;
-import Lib.ChaikinVolume;
-import Lib.Indicators;
-import Lib.TD;
+import TaLib.ChaikinVolume;
+import TaLib.Indicators;
+import TaLib.TD;
 
 import java.sql.Timestamp;
 import java.text.DecimalFormat;

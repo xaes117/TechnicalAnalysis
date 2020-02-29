@@ -1,9 +1,8 @@
-package Lib;
+package TaLib;
 
 
 import DataStructures.OHLC;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
