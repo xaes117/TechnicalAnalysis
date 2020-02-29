@@ -17,7 +17,7 @@ public class SystemTwo {
     private static String testString = "CHRIS/ICE_SY1";
     private static String[] tickers = {testString};
 
-//    private static String[] tickers = DataReciever.tickers;
+    //    private static String[] tickers = DataReciever.tickers;
     private static String[] periods = {"14400", "21600", "43200", "86400", "259200"};
 
     public static void main(String[] args) {
@@ -29,12 +29,15 @@ public class SystemTwo {
 
     public static void run() {
 
+        // Print SystemTwo's settings
         SystemTwo.PrintSettings();
 
         try {
 
+            // Get Trades
             List<Trade> tradeList = SystemTwo.GetTrades();
 
+            // for each trade in the tradeList create a Trade
             for (Trade trade : tradeList) {
 
                 double positionSize = Double.parseDouble(new DecimalFormat("#.###").format(100 * trade.positionSize));
@@ -76,46 +79,63 @@ public class SystemTwo {
 
     private static List<Trade> GetTrades() throws Exception {
 
+        // Create trade list
         List<Trade> tradeList = new ArrayList<>();
 
+        // Go through each ticker
         for (String ticker : tickers) {
 
+            // set default score 0 and highest 0
             double score = 0;
             double highest = 0;
 
+            // Get OHLC data
             HashMap<String, TickerData> data = DataReciever.getDataByTickerSymbol(ticker);
 
+            // If the ticker is a crypto ticker
             if (DataReciever.IsCrypto(ticker)) {
 
+                // Go through every time period listed
                 for (String period : periods) {
+
                     TickerData tickerData = data.get(period);
 
+                    // Check Chaikin Volume
                     List<Double> CO = ChaikinVolume.ChaikinOscillator(tickerData.getOhlcs());
+
+                    // Check TD
                     int td = TD.getTD(tickerData.getOhlcs());
 
 //                System.out.println("Period: " + period);
 //                System.out.println("TD: " + td);
 //                System.out.println("Crossover: " + Indicators.Crossover(CO));
 
+                    // Update score and highest score
                     score += (td + Indicators.Crossover(CO)) * SystemTwo.GetWeightByTimePeriod(period);
                     highest += (8 + 8) * SystemTwo.GetWeightByTimePeriod(period);
 
                 }
             } else {
+
+                // Stick to daily chart for non-crypto tickers
                 String period = "86400";
                 TickerData tickerData = data.get(period);
 
+                // if the data set is greater than 120 candles attempt to shorten the set
                 if (tickerData.getOhlcs().size() > 120) {
 
-//                    List<OHLC> ohlcs = tickerData.getOhlcs().subList(tickerData.getOhlcs().size()-200, tickerData.getOhlcs().size());
-
+                    // Check Chaikin volume
                     List<Double> CO = ChaikinVolume.ChaikinOscillator(tickerData.getOhlcs(), 120);
+
+                    // Check TD
                     int td = TD.getTD(tickerData.getOhlcs());
-//                    System.out.println(ohlcs.size());
+
+//                System.out.println(ohlcs.size());
 //                System.out.println("Period: " + period);
 //                System.out.println("TD: " + td);
 //                System.out.println("Crossover: " + Indicators.Crossover(CO));
 
+                    // Update scores
                     score += (td + Indicators.Crossover(CO)) * SystemTwo.GetWeightByTimePeriod(period);
                     highest += (8 + 8) * SystemTwo.GetWeightByTimePeriod(period);
                 }
@@ -123,6 +143,7 @@ public class SystemTwo {
 
             }
 
+            // start and end candles for later
             int start = data.get("86400").getOhlcs().size() - 7;
             int end = data.get("86400").getOhlcs().size();
 
@@ -130,20 +151,26 @@ public class SystemTwo {
 
                 Trade t = null;
 
-                double p = score/(highest * 1.05);
+                // calculate probability with some penalization for uncertainty
+                double uncertainty = 0.05;
+                double p = score / (highest * (1.0 + uncertainty));
 
+                // if p greater than 45% then make it no higher than 45%
                 if (p > 0.45 || p < -0.45) {
                     p = 0.45;
                 }
 
-                if  (score >= 0) {
+                // Get bullish trade scenario
+                if (score >= 0) {
                     t = RiskManager.getBullishTrade(data.get("86400").getOhlcs().subList(start, end), p);
                 }
 
+                // Get bearish trade scenario
                 if (score < -0) {
                     t = RiskManager.getBearishTrade(data.get("86400").getOhlcs().subList(start, end), p);
                 }
 
+                // Create trade
                 t.setTicker(ticker);
                 t.setPeriod("86400");
                 tradeList.add(t);
