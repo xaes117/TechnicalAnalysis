@@ -11,6 +11,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+// System Three currently in progress. Will use the FA library for fundamental analysis
+
 public class SystemThree {
 
     private static String testString = "CHRIS/ICE_SY1";
